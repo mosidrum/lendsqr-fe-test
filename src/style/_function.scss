@@ -1,0 +1,5 @@
+@use 'variables';
+
+@function size_unit($size) {
+  @return $size * variables.$base-unit;
+}
