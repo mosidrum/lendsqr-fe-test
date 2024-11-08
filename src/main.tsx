@@ -1,10 +1,11 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './style/index.scss'
-import {App} from "./App.tsx";
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import './style/index.scss';
+import { App } from './App.tsx';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+// Use querySelector instead of getElementById
+createRoot(document.querySelector('#root')!).render(
+    <StrictMode>
+        <App />
+    </StrictMode>
+);
