@@ -638,6 +638,10 @@
   text-align: justify;
 }
 
+.text-underline {
+  text-decoration: underline;
+}
+
 .font-weight-bold {
   font-weight: bold;
 }
@@ -806,8 +810,16 @@
   width: 100%;
 }
 
+.width-60 {
+  width: 60%;
+}
+
 .width-50 {
   width: 50%;
+}
+
+.width-40 {
+  width: 40%;
 }
 
 .width-25 {
