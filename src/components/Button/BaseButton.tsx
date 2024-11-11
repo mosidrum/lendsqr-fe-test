@@ -7,7 +7,10 @@ export interface BaseButtonProps {
 }
 
 export const BaseButton = ({ title, onClick, className }: BaseButtonProps) => (
-  <button onClick={onClick} className={`${className} border-none cursor-pointer button`}>
+  <button
+    onClick={onClick}
+    className={`${className} border-radius border-none cursor-pointer button`}
+  >
     {title}
   </button>
 );
