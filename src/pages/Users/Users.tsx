@@ -1,6 +1,7 @@
 import { Card } from '../../components/Card/Card.tsx';
 import { dashboardCardData } from '../Dashboard';
 import './User.scss';
+import { DataTable } from '../../components';
 
 export const Users = () => (
   <div>
@@ -16,5 +17,6 @@ export const Users = () => (
         />
       ))}
     </div>
+    <DataTable />
   </div>
 );
