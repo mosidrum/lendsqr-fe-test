@@ -7,7 +7,7 @@ export const SearchBox = () => (
       className=" outline-none px-2 width-100 height-100 input border-primary"
       placeholder="Search for anything"
     />
-    <div className="button d-flex align-items-center justify-content-center height-100 p-1 background-button-color">
+    <div className="search-input d-flex align-items-center justify-content-center height-100 p-1 background-button-color">
       <IoSearchOutline color="white" size={18} />
     </div>
   </div>

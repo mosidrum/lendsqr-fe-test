@@ -4,6 +4,7 @@ import { IoIosNotificationsOutline, IoMdArrowDropdown } from 'react-icons/io';
 
 import { Logo, SearchBox } from '../../components';
 import user from '../../assets/user.png';
+import { SideBar } from './SideBar.tsx';
 
 export const Dashboard = () => (
   <div className="dashboard-layout">
@@ -20,7 +21,9 @@ export const Dashboard = () => (
         <IoMdArrowDropdown color="#213f7d" size={18} className="ml-n1" />
       </div>
     </header>
-    <aside className="sidebar background-white">Sidebar</aside>
+    <aside className="sidebar p-1 width-100 background-white">
+      <SideBar />
+    </aside>
     <main className="content">
       <Outlet />
     </main>
