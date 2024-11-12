@@ -1,23 +1,19 @@
 import { ReactNode } from 'react';
+import './SideBarList.scss';
 
 type SideBarListProps = {
   title?: string;
-  leftIcon?: ReactNode;
+  image?: string;
   rightIcon?: ReactNode;
   variant: 'primary' | 'secondary';
 };
 
-export const SideBarList = ({
-  title,
-  leftIcon,
-  rightIcon,
-  variant = 'primary'
-}: SideBarListProps) => {
+export const SideBarList = ({ title, image, rightIcon, variant = 'primary' }: SideBarListProps) => {
   const textColor = variant === 'primary' ? '#213f7d' : '#545f7d';
 
   return (
-    <div className="sidebar-list d-flex align-items-center gap-1">
-      {leftIcon}
+    <div className="sidebar-list d-flex align-items-center">
+      <img src={image} alt={title} />
       <div className="font-normal" style={{ color: textColor }}>
         {title}
       </div>
