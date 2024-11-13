@@ -1,6 +1,14 @@
+@use '../../style/_variables.scss' as utils;
+
 .cards-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-between;
+}
+
+.pagi {
+  padding: 4px;
+  border-radius: 4px;
+  background-color: rgba(utils.$text-secondary, 0.1);
 }
