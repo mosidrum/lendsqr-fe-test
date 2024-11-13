@@ -13,20 +13,22 @@ export const Users = () => {
   if (!data) return <div>Loading...</div>;
 
   return (
-    <div>
+    <div className="">
       <div className="font-larger text-color-secondary mb-4 fw-medium">Users</div>
-      <div className="cards-container d-flex align-items-center justify-content-between gap-4">
-        {dashboardCardData.map((item, index) => (
-          <Card
-            key={index}
-            icon={item.icon}
-            title={item.title}
-            count={item.count}
-            background={item.background}
-          />
-        ))}
+      <div className="d-flex flex-dir-column gap-5">
+        <div className="cards-container d-flex align-items-center justify-content-between gap-4">
+          {dashboardCardData.map((item, index) => (
+            <Card
+              key={index}
+              icon={item.icon}
+              title={item.title}
+              count={item.count}
+              background={item.background}
+            />
+          ))}
+        </div>
+        <DataTable users={data} />
       </div>
-      <DataTable users={data} />
     </div>
   );
 };
