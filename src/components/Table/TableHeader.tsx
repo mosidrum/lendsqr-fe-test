@@ -4,15 +4,18 @@ import TableCell from '@mui/material/TableCell';
 
 type TableHeadProps = {
   title?: string;
+  isLastItem: boolean;
 };
 
-export const TableHeader = ({ title }: TableHeadProps) => (
+export const TableHeader = ({ title, isLastItem }: TableHeadProps) => (
   <TableCell align="left" size="small">
     {title}
-    <Tooltip title={`Filter ${title}`}>
-      <IconButton>
-        <FilterListIcon />
-      </IconButton>
-    </Tooltip>
+    {isLastItem ? null : (
+      <Tooltip title={`Filter ${title}`}>
+        <IconButton>
+          <FilterListIcon />
+        </IconButton>
+      </Tooltip>
+    )}
   </TableCell>
 );
