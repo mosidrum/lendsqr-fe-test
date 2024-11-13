@@ -16,6 +16,10 @@ export const BaseField = ({ icon, placeholder, value, type }: BaseFieldProps) =>
       type={type}
       className="width-100 border-none outline-none font-small input-field text-color-primary fw-normal"
     />
-    <div className="font-smaller text-color-tertiary fw-medium letter-spacing">{icon}</div>
+    {typeof icon === 'string' ? (
+      <div className="font-smaller text-color-tertiary fw-medium letter-spacing">{icon}</div>
+    ) : (
+      <div>{icon}</div>
+    )}
   </div>
 );
