@@ -7,8 +7,10 @@ import Paper from '@mui/material/Paper';
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import { styled } from '@mui/material/styles';
 import { BsThreeDotsVertical } from 'react-icons/bs';
+import { useState } from 'react';
 import { TableHeader } from './TableHeader.tsx';
 import { User } from '../../types';
+import { Popup } from '../Popup';
 
 type TableDataProps = {
   users: User[];
@@ -46,35 +48,49 @@ const tableHeadData = [
   ''
 ];
 
-export const DataTable = ({ users }: TableDataProps) => (
-  <TableContainer component={Paper}>
-    <Table sx={{ minWidth: 650 }} aria-label="simple table">
-      <TableHead>
-        <TableRow>
-          {tableHeadData.map((header, index) => (
-            <TableHeader
-              title={header}
-              key={index}
-              isLastItem={index === tableHeadData.length - 1}
-            />
+export const DataTable = ({ users }: TableDataProps) => {
+  const [openPopupIndex, setOpenPopupIndex] = useState<number | null>(null);
+
+  const handlePopupToggle = (index: number) => {
+    setOpenPopupIndex(openPopupIndex === index ? null : index);
+  };
+
+  return (
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            {tableHeadData.map((header, index) => (
+              <TableHeader
+                title={header}
+                key={index}
+                isLastItem={index === tableHeadData.length - 1}
+              />
+            ))}
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {users.map((user, index) => (
+            <StyledTableRow key={user.userId}>
+              <StyledTableCell>{user.organization}</StyledTableCell>
+              <StyledTableCell align="left">{user.username}</StyledTableCell>
+              <StyledTableCell align="left">{user.email}</StyledTableCell>
+              <StyledTableCell align="left">{user.phoneNumber}</StyledTableCell>
+              <StyledTableCell align="left">{user.dateJoined}</StyledTableCell>
+              <StyledTableCell align="left">{user.status}</StyledTableCell>
+              <StyledTableCell align="left" style={{ position: 'relative' }}>
+                <BsThreeDotsVertical onClick={() => handlePopupToggle(index)} />
+                {openPopupIndex === index && (
+                  <Popup
+                    openPopup={openPopupIndex === index}
+                    setOpenPopup={() => handlePopupToggle(index)}
+                  />
+                )}
+              </StyledTableCell>
+            </StyledTableRow>
           ))}
-        </TableRow>
-      </TableHead>
-      <TableBody>
-        {users.map((user) => (
-          <StyledTableRow key={user.userId}>
-            <StyledTableCell>{user.organization}</StyledTableCell>
-            <StyledTableCell align="left">{user.username}</StyledTableCell>
-            <StyledTableCell align="left">{user.email}</StyledTableCell>
-            <StyledTableCell align="left">{user.phoneNumber}</StyledTableCell>
-            <StyledTableCell align="left">{user.dateJoined}</StyledTableCell>
-            <StyledTableCell align="left">{user.status}</StyledTableCell>
-            <StyledTableCell align="left">
-              <BsThreeDotsVertical />
-            </StyledTableCell>
-          </StyledTableRow>
-        ))}
-      </TableBody>
-    </Table>
-  </TableContainer>
-);
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+};
