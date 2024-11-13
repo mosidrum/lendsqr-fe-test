@@ -1,3 +1,5 @@
+@use '../../style/variables' as utils;
+
 .dashboard-layout {
   display: grid;
     grid-template-rows: 100px 1fr;
@@ -27,6 +29,7 @@
   grid-column: 2 / -1;
   padding: 60px;
   overflow-y: auto;
+  background-color: utils.$background-gray;
 }
 
 .user {

@@ -1,0 +1,24 @@
+@use '../../style/variables' as utils;
+
+.avatar {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: #dbe0ea;
+}
+
+.line {
+  width: 1px;
+  height: 80px;
+  background: rgba(utils.$border-secondary, 0.2);
+}
+
+.heading {
+  padding-bottom: 8px;
+
+  &:hover {
+    cursor: pointer;
+    color: utils.$button-color;
+    border-bottom: 2px solid utils.$button-color;
+  }
+}

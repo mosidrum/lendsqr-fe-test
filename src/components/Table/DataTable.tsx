@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableContainer from '@mui/material/TableContainer';
@@ -14,6 +15,7 @@ import { Popup } from '../Popup';
 import { Filter } from '../Filter';
 import { textToLowerCase } from '../../utils';
 import { StatusBadge } from './StatusBadge.tsx';
+import { paths } from '../../routes/paths.ts';
 
 type TableDataProps = {
   users: User[];
@@ -47,6 +49,8 @@ const tableHeadData = [
 export const DataTable = ({ users }: TableDataProps) => {
   const [openPopupIndex, setOpenPopupIndex] = useState<number | null>(null);
   const [openFilter, setOpenFilter] = useState<boolean>(false);
+
+  const navigate = useNavigate();
 
   const handlePopupToggle = (index: number) => {
     setOpenPopupIndex(openPopupIndex === index ? null : index);
@@ -87,6 +91,7 @@ export const DataTable = ({ users }: TableDataProps) => {
                   <Popup
                     openPopup={openPopupIndex === index}
                     setOpenPopup={() => handlePopupToggle(index)}
+                    onClick={() => navigate(`${paths.dashboard}/${user.userId}`)}
                   />
                 )}
               </StyledTableCell>

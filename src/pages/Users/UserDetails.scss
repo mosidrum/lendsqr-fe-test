@@ -1,0 +1,20 @@
+@use '../../style/_variables.scss' as *;
+
+.blacklist, .activate {
+  height: 17px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  background-color: $background-white;
+}
+
+.blacklist {
+  border: 1px solid $color-blacklist;
+  color: $color-blacklist;
+}
+
+.activate {
+  border: 1px solid $button-color;
+  color: $button-color;
+}
