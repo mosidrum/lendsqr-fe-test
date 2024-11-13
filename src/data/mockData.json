@@ -1,0 +1,347 @@
+{
+  "users":
+    [
+      {
+        "userId": "acd0a9bd0",
+        "organization": "FARMEX",
+        "personalInfo": {
+          "fullName": "Laurel Ross",
+          "bvn": 56784710684,
+          "gender": "female",
+          "maritalStatus": "Widowed",
+          "children": "None",
+          "typeOfResidence": "Apartment"
+        },
+        "username": "lelopez",
+        "email": "lelopez@farmex.com",
+        "phoneNumber": "+1 (800) 563-2068",
+        "dateJoined": "Thursday-02-2024",
+        "status": "active",
+        "loanAmount": 128587,
+        "bankAccount": 2925313406,
+        "bankAccountName": "Lara Curtis",
+        "educationalInfo": {
+          "level": "M.Sc",
+          "employmentStatus": "Employed",
+          "sector": "Construction",
+          "duration": "4 years",
+          "officeEmail": "laracurtis@farmex.com"
+        },
+        "socials": {
+          "twitter": "@foleyclemons",
+          "facebook": "Leonor Mendez",
+          "instagram": "@noelleboyd"
+        },
+        "guarantor": {
+          "fullName": "Arlene Pratt",
+          "phoneNumber": "+1 (825) 543-2927",
+          "email": "arlenepratt@farmex.com",
+          "relationship": "Father"
+        }
+      },
+      {
+        "userId": "fb28ba007",
+        "organization": "ENTHAZE",
+        "personalInfo": {
+          "fullName": "Avery Holden",
+          "bvn": 75252856521,
+          "gender": "male",
+          "maritalStatus": "Single",
+          "children": "0,1,2,3,4,5",
+          "typeOfResidence": "House"
+        },
+        "username": "britneyprince",
+        "email": "britneyprince@enthaze.com",
+        "phoneNumber": "+1 (994) 403-3061",
+        "dateJoined": "Monday-01-2023",
+        "status": "inactive",
+        "loanAmount": 637094,
+        "bankAccount": 8591342655,
+        "bankAccountName": "Isabella Sargent",
+        "educationalInfo": {
+          "level": "M.Sc",
+          "employmentStatus": "Unemployed",
+          "sector": "FinTech",
+          "duration": "1 year",
+          "officeEmail": "isabellasargent@enthaze.com"
+        },
+        "socials": {
+          "twitter": "@mcleodvalentine",
+          "facebook": "Miriam Owen",
+          "instagram": "@gaymolina"
+        },
+        "guarantor": {
+          "fullName": "Head Reeves",
+          "phoneNumber": "+1 (936) 448-3124",
+          "email": "headreeves@enthaze.com",
+          "relationship": "Sister"
+        }
+      },
+      {
+        "userId": "0efa603ea",
+        "organization": "COSMOSIS",
+        "personalInfo": {
+          "fullName": "Alston Dillard",
+          "bvn": 36560953344,
+          "gender": "male",
+          "maritalStatus": "Divorced",
+          "children": "None",
+          "typeOfResidence": "Townhouse"
+        },
+        "username": "duncanhahn",
+        "email": "duncanhahn@cosmosis.com",
+        "phoneNumber": "+1 (832) 504-3925",
+        "dateJoined": "Monday-03-2018",
+        "status": "active",
+        "loanAmount": 557770,
+        "bankAccount": 2883874912,
+        "bankAccountName": "Charles Richard",
+        "educationalInfo": {
+          "level": "M.Sc",
+          "employmentStatus": "Unemployed",
+          "sector": "Health",
+          "duration": "6 months",
+          "officeEmail": "charlesrichard@cosmosis.com"
+        },
+        "socials": {
+          "twitter": "@samanthashepard",
+          "facebook": "Kristi Mcguire",
+          "instagram": "@luladotson"
+        },
+        "guarantor": {
+          "fullName": "Yang Case",
+          "phoneNumber": "+1 (812) 443-3369",
+          "email": "yangcase@cosmosis.com",
+          "relationship": "Sister"
+        }
+      },
+      {
+        "userId": "8138b8ffe",
+        "organization": "EVIDENDS",
+        "personalInfo": {
+          "fullName": "Tricia Fletcher",
+          "bvn": 53207848425,
+          "gender": "female",
+          "maritalStatus": "Married",
+          "children": "0,1,2,3,4,5",
+          "typeOfResidence": "Apartment"
+        },
+        "username": "fordcash",
+        "email": "fordcash@evidends.com",
+        "phoneNumber": "+1 (814) 589-2241",
+        "dateJoined": "Friday-09-2019",
+        "status": "inactive",
+        "loanAmount": 391331,
+        "bankAccount": 9289013741,
+        "bankAccountName": "Blackwell Harding",
+        "educationalInfo": {
+          "level": "PhD",
+          "employmentStatus": "Unemployed",
+          "sector": "Construction",
+          "duration": "1 year",
+          "officeEmail": "blackwellharding@evidends.com"
+        },
+        "socials": {
+          "twitter": "@silvalang",
+          "facebook": "Blake Slater",
+          "instagram": "@barkerdaniel"
+        },
+        "guarantor": {
+          "fullName": "Sonia Rosa",
+          "phoneNumber": "+1 (946) 545-2096",
+          "email": "soniarosa@evidends.com",
+          "relationship": "Mother"
+        }
+      },
+      {
+        "userId": "67aad397b",
+        "organization": "SOPRANO",
+        "personalInfo": {
+          "fullName": "Ellen Shannon",
+          "bvn": 54579853085,
+          "gender": "female",
+          "maritalStatus": "Widowed",
+          "children": "0,1,2,3,4,5",
+          "typeOfResidence": "Condo"
+        },
+        "username": "trinascott",
+        "email": "trinascott@soprano.com",
+        "phoneNumber": "+1 (953) 600-3222",
+        "dateJoined": "Tuesday-07-2020",
+        "status": "inactive",
+        "loanAmount": 527870,
+        "bankAccount": 9157292885,
+        "bankAccountName": "Dunn Miller",
+        "educationalInfo": {
+          "level": "PhD",
+          "employmentStatus": "Unemployed",
+          "sector": "Engineering",
+          "duration": "1 year",
+          "officeEmail": "dunnmiller@soprano.com"
+        },
+        "socials": {
+          "twitter": "@angelitabutler",
+          "facebook": "Robinson Crosby",
+          "instagram": "@keribanks"
+        },
+        "guarantor": {
+          "fullName": "Kennedy Noble",
+          "phoneNumber": "+1 (980) 579-3819",
+          "email": "kennedynoble@soprano.com",
+          "relationship": "Brother"
+        }
+      },
+      {
+        "userId": "0e88aa739",
+        "organization": "CORIANDER",
+        "personalInfo": {
+          "fullName": "Knight Copeland",
+          "bvn": 81891986514,
+          "gender": "male",
+          "maritalStatus": "Married",
+          "children": "0,1,2,3,4,5",
+          "typeOfResidence": "Condo"
+        },
+        "username": "fitzpatrickjenkins",
+        "email": "fitzpatrickjenkins@coriander.com",
+        "phoneNumber": "+1 (952) 600-3937",
+        "dateJoined": "Sunday-07-2018",
+        "status": "pending",
+        "loanAmount": 638125,
+        "bankAccount": 3247501397,
+        "bankAccountName": "Thompson Black",
+        "educationalInfo": {
+          "level": "HND",
+          "employmentStatus": "Employed",
+          "sector": "Construction",
+          "duration": "9 months",
+          "officeEmail": "thompsonblack@coriander.com"
+        },
+        "socials": {
+          "twitter": "@cecilegregory",
+          "facebook": "Monique Snow",
+          "instagram": "@maebenson"
+        },
+        "guarantor": {
+          "fullName": "Chase Bass",
+          "phoneNumber": "+1 (825) 586-2701",
+          "email": "chasebass@coriander.com",
+          "relationship": "Brother"
+        }
+      },
+      {
+        "userId": "158f4dd6f",
+        "organization": "ZILLIDIUM",
+        "personalInfo": {
+          "fullName": "Jimenez Mckenzie",
+          "bvn": 82935335915,
+          "gender": "male",
+          "maritalStatus": "Married",
+          "children": "0,1,2,3,4,5",
+          "typeOfResidence": "House"
+        },
+        "username": "karenhunter",
+        "email": "karenhunter@zillidium.com",
+        "phoneNumber": "+1 (867) 423-3088",
+        "dateJoined": "Monday-03-2019",
+        "status": "pending",
+        "loanAmount": 777617,
+        "bankAccount": 7608736516,
+        "bankAccountName": "Joseph Day",
+        "educationalInfo": {
+          "level": "PhD",
+          "employmentStatus": "Employed",
+          "sector": "Construction",
+          "duration": "9 months",
+          "officeEmail": "josephday@zillidium.com"
+        },
+        "socials": {
+          "twitter": "@myrtlegarrison",
+          "facebook": "Glenda Dickson",
+          "instagram": "@russosykes"
+        },
+        "guarantor": {
+          "fullName": "Elsie Christensen",
+          "phoneNumber": "+1 (971) 581-3905",
+          "email": "elsiechristensen@zillidium.com",
+          "relationship": "Father"
+        }
+      },
+      {
+        "userId": "0c19fd687",
+        "organization": "ZIGGLES",
+        "personalInfo": {
+          "fullName": "Cherry Graham",
+          "bvn": 98588356702,
+          "gender": "male",
+          "maritalStatus": "Single",
+          "children": "None",
+          "typeOfResidence": "Apartment"
+        },
+        "username": "bonnerflowers",
+        "email": "bonnerflowers@ziggles.com",
+        "phoneNumber": "+1 (909) 417-2375",
+        "dateJoined": "Saturday-02-2022",
+        "status": "blacklisted",
+        "loanAmount": 159017,
+        "bankAccount": 8677193727,
+        "bankAccountName": "Noemi Fuller",
+        "educationalInfo": {
+          "level": "B.Sc",
+          "employmentStatus": "Employed",
+          "sector": "Engineering",
+          "duration": "6 months",
+          "officeEmail": "noemifuller@ziggles.com"
+        },
+        "socials": {
+          "twitter": "@vangsampson",
+          "facebook": "Tommie Orr",
+          "instagram": "@franklinchandler"
+        },
+        "guarantor": {
+          "fullName": "Mckee Cox",
+          "phoneNumber": "+1 (864) 400-2500",
+          "email": "mckeecox@ziggles.com",
+          "relationship": "Sister"
+        }
+      },
+      {
+        "userId": "1814348b5",
+        "organization": "KIGGLE",
+        "personalInfo": {
+          "fullName": "Campos Stark",
+          "bvn": 77553355705,
+          "gender": "male",
+          "maritalStatus": "Widowed",
+          "children": "None",
+          "typeOfResidence": "House"
+        },
+        "username": "celestewilliamson",
+        "email": "celestewilliamson@kiggle.com",
+        "phoneNumber": "+1 (861) 520-3731",
+        "dateJoined": "Saturday-08-2018",
+        "status": "blacklisted",
+        "loanAmount": 853018,
+        "bankAccount": 7670569615,
+        "bankAccountName": "Sylvia Leblanc",
+        "educationalInfo": {
+          "level": "B.Sc",
+          "employmentStatus": "Employed",
+          "sector": "Construction",
+          "duration": "4 years",
+          "officeEmail": "sylvialeblanc@kiggle.com"
+        },
+        "socials": {
+          "twitter": "@hollyoneal",
+          "facebook": "Rowena Lyons",
+          "instagram": "@slaterdecker"
+        },
+        "guarantor": {
+          "fullName": "Robert Tucker",
+          "phoneNumber": "+1 (884) 453-2927",
+          "email": "roberttucker@kiggle.com",
+          "relationship": "Sister"
+        }
+      }
+    ]
+}
