@@ -830,6 +830,10 @@
   width: 75%;
 }
 
+.width-fit-content {
+  width: fit-content;
+}
+
 .vh-100 {
   height: 100vh;
 }
@@ -908,6 +912,7 @@
     display: none;
   }
 }
+
 .wrap{
   flex-wrap: wrap;
 }

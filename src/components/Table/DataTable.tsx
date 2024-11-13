@@ -77,8 +77,8 @@ export const DataTable = ({ users }: TableDataProps) => {
             <StyledTableRow key={user.userId}>
               <StyledTableCell>{user.organization}</StyledTableCell>
               <StyledTableCell align="left">{user.username}</StyledTableCell>
-              <StyledTableCell align="left">{user.email}</StyledTableCell>
-              <StyledTableCell align="left">{user.phoneNumber}</StyledTableCell>
+              <StyledTableCell align="left">{user.personalInfo.email}</StyledTableCell>
+              <StyledTableCell align="left">{user.personalInfo.phoneNumber}</StyledTableCell>
               <StyledTableCell align="left">{textToLowerCase(user.dateJoined)}</StyledTableCell>
               <StyledTableCell align="left">
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -86,7 +86,10 @@ export const DataTable = ({ users }: TableDataProps) => {
                 </div>
               </StyledTableCell>
               <StyledTableCell align="left" style={{ position: 'relative' }}>
-                <BsThreeDotsVertical onClick={() => handlePopupToggle(index)} />
+                <BsThreeDotsVertical
+                  className="cursor-pointer"
+                  onClick={() => handlePopupToggle(index)}
+                />
                 {openPopupIndex === index && (
                   <Popup
                     openPopup={openPopupIndex === index}

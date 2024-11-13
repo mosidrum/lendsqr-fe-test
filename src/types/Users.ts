@@ -10,6 +10,8 @@ type Relationship = 'Sister' | 'Brother' | 'Father' | 'Mother' | 'Husband' | 'Wi
 interface PersonalInfo {
   fullName: string;
   bvn: number;
+  email: string;
+  phoneNumber: string;
   gender: Gender;
   maritalStatus: MaritalStatus;
   children: string | number;
@@ -22,6 +24,8 @@ interface EducationalInfo {
   sector: Sector;
   duration: '2 years' | '1 year' | '4 years' | '6 months' | '10 years' | '9 months';
   officeEmail: string;
+  monthlyIncome: string;
+  loanRepay: string;
 }
 
 interface Socials {

@@ -1,364 +1,402 @@
-{
-  "users": [
-    {
-      "UserId": "33fb0985e",
-      "Organization": "REMOTION",
-      "PersonalInfo": {
-        "FullName": "Rosalind Dalton",
-        "Bvn": 44890954915,
-        "Gender": "female",
-        "Email": "rosalinddalton@remotion.com",
-        "PhoneNumber": "+1 (873) 555-3845",
-        "MaritalStatus": "Single",
-        "Children": "0,1,2,3,4,5",
-        "TypeOfResidence": "Apartment"
-      },
-      "Username": "brookehouse",
-      "DateJoined": "2019-11-25T20:34:00 -01:00",
-      "Status": "active",
-      "LoanAmount": 360280,
-      "BankAccount": 9804228299,
-      "BankAccountName": "Lynch Nixon",
-      "EducationalInfo": {
-        "Level": "HND",
-        "EmploymentStatus": "Employed",
-        "Sector": "FinTech",
-        "Duration": "4 years",
-        "OfficeEmail": "lynchnixon@remotion.com",
-        "monthlyIncome": "N121,400.00 - N410,090.00",
-        "loanRepay": "523,900"
-      },
-      "Socials": {
-        "Twitter": "@velazquezkennedy",
-        "Facebook": "Renee Reid",
-        "Instagram": "@gilescunningham"
-      },
-      "Guarantor": {
-        "FullName": "Dionne Dunn",
-        "PhoneNumber": "+1 (899) 550-3096",
-        "Email": "dionnedunn@remotion.com",
-        "Relationship": "Mother"
-      }
+{"users":[
+  {
+    "userId": "a7eef05eb",
+    "organization": "BIOLIVE",
+    "personalInfo": {
+      "fullName": "Cotton Burnett",
+      "bvn": 79574364947,
+      "gender": "male",
+      "email": "cottonburnett@biolive.com",
+      "phoneNumber": "+1 (927) 537-3650",
+      "maritalStatus": "Widowed",
+      "children": "None",
+      "typeOfResidence": "Townhouse"
     },
-    {
-      "UserId": "28922e533",
-      "Organization": "ENTROFLEX",
-      "PersonalInfo": {
-        "FullName": "Parks Potter",
-        "Bvn": 48621326064,
-        "Gender": "male",
-        "Email": "parkspotter@entroflex.com",
-        "PhoneNumber": "+1 (934) 447-3665",
-        "MaritalStatus": "Married",
-        "Children": "None",
-        "TypeOfResidence": "Townhouse"
-      },
-      "Username": "evangelinemorris",
-      "DateJoined": "2023-12-25T07:55:23 -01:00",
-      "Status": "blacklisted",
-      "LoanAmount": 484508,
-      "BankAccount": 2883666578,
-      "BankAccountName": "Bolton Franco",
-      "EducationalInfo": {
-        "Level": "HND",
-        "EmploymentStatus": "Employed",
-        "Sector": "Engineering",
-        "Duration": "9 months",
-        "OfficeEmail": "boltonfranco@entroflex.com",
-        "monthlyIncome": "N121,400.00 - N410,090.00",
-        "loanRepay": "62,000"
-      },
-      "Socials": {
-        "Twitter": "@wattsbrady",
-        "Facebook": "Burt Rodriquez",
-        "Instagram": "@blackferguson"
-      },
-      "Guarantor": {
-        "FullName": "Middleton Kirk",
-        "PhoneNumber": "+1 (924) 412-3654",
-        "Email": "middletonkirk@entroflex.com",
-        "Relationship": "Brother"
-      }
+    "username": "meganmosley",
+    "dateJoined": "2019-08-12",
+    "status": "active",
+    "loanAmount": 834561,
+    "bankAccount": 4285215299,
+    "bankName": "Bank of America",
+    "educationalInfo": {
+      "level": "B.Sc",
+      "employmentStatus": "Unemployed",
+      "sector": "Engineering",
+      "duration": "9 months",
+      "officeEmail": "meganmosley@biolive.com",
+      "monthlyIncome": "N121,400.00 - N410,090.00",
+      "loanRepay": "47,100"
     },
-    {
-      "UserId": "c835d25b3",
-      "Organization": "ESCENTA",
-      "PersonalInfo": {
-        "FullName": "Larsen Ratliff",
-        "Bvn": 48859577576,
-        "Gender": "male",
-        "Email": "larsenratliff@escenta.com",
-        "PhoneNumber": "+1 (881) 516-3094",
-        "MaritalStatus": "Widowed",
-        "Children": "None",
-        "TypeOfResidence": "House"
-      },
-      "Username": "britneyalvarado",
-      "DateJoined": "2019-08-17T22:15:29 -01:00",
-      "Status": "blacklisted",
-      "LoanAmount": 956244,
-      "BankAccount": 4981937073,
-      "BankAccountName": "Workman Whitaker",
-      "EducationalInfo": {
-        "Level": "B.Sc",
-        "EmploymentStatus": "Unemployed",
-        "Sector": "FinTech",
-        "Duration": "6 months",
-        "OfficeEmail": "workmanwhitaker@escenta.com",
-        "monthlyIncome": "N10,100.00 - N50,003.00",
-        "loanRepay": "120,999"
-      },
-      "Socials": {
-        "Twitter": "@morsemolina",
-        "Facebook": "Strickland Barlow",
-        "Instagram": "@katiehays"
-      },
-      "Guarantor": {
-        "FullName": "Stein Mclaughlin",
-        "PhoneNumber": "+1 (807) 548-3926",
-        "Email": "steinmclaughlin@escenta.com",
-        "Relationship": "Husband"
-      }
+    "socials": {
+      "twitter": "@roslynpatrick",
+      "facebook": "Teresa Newman",
+      "instagram": "@reneemendez"
     },
-    {
-      "UserId": "e1db24fb8",
-      "Organization": "ZEROLOGY",
-      "PersonalInfo": {
-        "FullName": "Compton Kerr",
-        "Bvn": 16302654519,
-        "Gender": "male",
-        "Email": "comptonkerr@zerology.com",
-        "PhoneNumber": "+1 (880) 422-2849",
-        "MaritalStatus": "Widowed",
-        "Children": "0,1,2,3,4,5",
-        "TypeOfResidence": "House"
-      },
-      "Username": "mayozamora",
-      "DateJoined": "2020-04-01T04:13:51 -01:00",
-      "Status": "pending",
-      "LoanAmount": 152478,
-      "BankAccount": 8962674394,
-      "BankAccountName": "Goodman Calderon",
-      "EducationalInfo": {
-        "Level": "PhD",
-        "EmploymentStatus": "Employed",
-        "Sector": "Engineering",
-        "Duration": "6 months",
-        "OfficeEmail": "goodmancalderon@zerology.com",
-        "monthlyIncome": "N200,000.00 - N300,000.00",
-        "loanRepay": "40,000"
-      },
-      "Socials": {
-        "Twitter": "@craiggarrett",
-        "Facebook": "Krista Hendrix",
-        "Instagram": "@beardbrennan"
-      },
-      "Guarantor": {
-        "FullName": "Jillian Hickman",
-        "PhoneNumber": "+1 (926) 588-3638",
-        "Email": "jillianhickman@zerology.com",
-        "Relationship": "Husband"
-      }
-    },
-    {
-      "UserId": "8da4eb20a",
-      "Organization": "POLARIUM",
-      "PersonalInfo": {
-        "FullName": "Gale Sandoval",
-        "Bvn": 10584901774,
-        "Gender": "female",
-        "Email": "galesandoval@polarium.com",
-        "PhoneNumber": "+1 (944) 446-3343",
-        "MaritalStatus": "Single",
-        "Children": "None",
-        "TypeOfResidence": "Apartment"
-      },
-      "Username": "popelester",
-      "DateJoined": "2018-12-14T13:08:50 -01:00",
-      "Status": "blacklisted",
-      "LoanAmount": 734970,
-      "BankAccount": 7877283311,
-      "BankAccountName": "Lowe Brock",
-      "EducationalInfo": {
-        "Level": "M.Sc",
-        "EmploymentStatus": "Employed",
-        "Sector": "FinTech",
-        "Duration": "9 months",
-        "OfficeEmail": "lowebrock@polarium.com",
-        "monthlyIncome": "N10,100.00 - N50,003.00",
-        "loanRepay": "62,000"
-      },
-      "Socials": {
-        "Twitter": "@carissahayes",
-        "Facebook": "Hancock Owens",
-        "Instagram": "@kirklandspencer"
-      },
-      "Guarantor": {
-        "FullName": "Karin Richards",
-        "PhoneNumber": "+1 (944) 579-3508",
-        "Email": "karinrichards@polarium.com",
-        "Relationship": "Sister"
-      }
-    },
-    {
-      "UserId": "436d3b778",
-      "Organization": "OVERFORK",
-      "PersonalInfo": {
-        "FullName": "Maritza Medina",
-        "Bvn": 42515225786,
-        "Gender": "female",
-        "Email": "maritzamedina@overfork.com",
-        "PhoneNumber": "+1 (952) 481-3646",
-        "MaritalStatus": "Divorced",
-        "Children": "0,1,2,3,4,5",
-        "TypeOfResidence": "Apartment"
-      },
-      "Username": "mitchellhancock",
-      "DateJoined": "2024-09-25T04:58:48 -01:00",
-      "Status": "blacklisted",
-      "LoanAmount": 303761,
-      "BankAccount": 9139530495,
-      "BankAccountName": "Golden Green",
-      "EducationalInfo": {
-        "Level": "HND",
-        "EmploymentStatus": "Employed",
-        "Sector": "Health",
-        "Duration": "10 years",
-        "OfficeEmail": "goldengreen@overfork.com",
-        "monthlyIncome": "N40,600.00 - N150,900.00",
-        "loanRepay": "120,999"
-      },
-      "Socials": {
-        "Twitter": "@kellybattle",
-        "Facebook": "Brock Heath",
-        "Instagram": "@latashakramer"
-      },
-      "Guarantor": {
-        "FullName": "Marylou Baldwin",
-        "PhoneNumber": "+1 (951) 589-2190",
-        "Email": "maryloubaldwin@overfork.com",
-        "Relationship": "Husband"
-      }
-    },
-    {
-      "UserId": "bf7894121",
-      "Organization": "PORTALINE",
-      "PersonalInfo": {
-        "FullName": "Eva Leon",
-        "Bvn": 14824975124,
-        "Gender": "female",
-        "Email": "evaleon@portaline.com",
-        "PhoneNumber": "+1 (878) 482-3442",
-        "MaritalStatus": "Widowed",
-        "Children": "None",
-        "TypeOfResidence": "Townhouse"
-      },
-      "Username": "michaelmathis",
-      "DateJoined": "2023-02-15T09:23:57 -01:00",
-      "Status": "blacklisted",
-      "LoanAmount": 931856,
-      "BankAccount": 7934678426,
-      "BankAccountName": "Sutton Anderson",
-      "EducationalInfo": {
-        "Level": "B.Sc",
-        "EmploymentStatus": "Unemployed",
-        "Sector": "Construction",
-        "Duration": "1 year",
-        "OfficeEmail": "suttonanderson@portaline.com",
-        "monthlyIncome": "N10,100.00 - N50,003.00",
-        "loanRepay": "1,000,000"
-      },
-      "Socials": {
-        "Twitter": "@melissaodonnell",
-        "Facebook": "Burgess Alvarez",
-        "Instagram": "@gentryclayton"
-      },
-      "Guarantor": {
-        "FullName": "Nikki Atkinson",
-        "PhoneNumber": "+1 (944) 567-3575",
-        "Email": "nikkiatkinson@portaline.com",
-        "Relationship": "Wife"
-      }
-    },
-    {
-      "UserId": "255eea834",
-      "Organization": "MANGELICA",
-      "PersonalInfo": {
-        "FullName": "Bean Bowers",
-        "Bvn": 46002079419,
-        "Gender": "male",
-        "Email": "beanbowers@mangelica.com",
-        "PhoneNumber": "+1 (847) 522-3832",
-        "MaritalStatus": "Single",
-        "Children": "0,1,2,3,4,5",
-        "TypeOfResidence": "House"
-      },
-      "Username": "colettereilly",
-      "DateJoined": "2019-06-27T01:10:50 -01:00",
-      "Status": "inactive",
-      "LoanAmount": 477091,
-      "BankAccount": 8141404887,
-      "BankAccountName": "Wyatt Stephens",
-      "EducationalInfo": {
-        "Level": "HND",
-        "EmploymentStatus": "Employed",
-        "Sector": "Engineering",
-        "Duration": "9 months",
-        "OfficeEmail": "wyattstephens@mangelica.com",
-        "monthlyIncome": "N109,104,000.00 - N300,012,000.00",
-        "loanRepay": "40,000"
-      },
-      "Socials": {
-        "Twitter": "@nataliecantrell",
-        "Facebook": "Avery Larsen",
-        "Instagram": "@feleciamcgowan"
-      },
-      "Guarantor": {
-        "FullName": "Pierce Melton",
-        "PhoneNumber": "+1 (961) 475-2818",
-        "Email": "piercemelton@mangelica.com",
-        "Relationship": "Brother"
-      }
-    },
-    {
-      "UserId": "a571033e0",
-      "Organization": "TWIIST",
-      "PersonalInfo": {
-        "FullName": "Sharpe Pate",
-        "Bvn": 99754067125,
-        "Gender": "male",
-        "Email": "sharpepate@twiist.com",
-        "PhoneNumber": "+1 (974) 529-2034",
-        "MaritalStatus": "Divorced",
-        "Children": "0,1,2,3,4,5",
-        "TypeOfResidence": "Condo"
-      },
-      "Username": "christensenpetty",
-      "DateJoined": "2024-05-27T01:48:31 -01:00",
-      "Status": "blacklisted",
-      "LoanAmount": 149763,
-      "BankAccount": 2193443389,
-      "BankAccountName": "Peterson Galloway",
-      "EducationalInfo": {
-        "Level": "HND",
-        "EmploymentStatus": "Unemployed",
-        "Sector": "FinTech",
-        "Duration": "1 year",
-        "OfficeEmail": "petersongalloway@twiist.com",
-        "monthlyIncome": "N109,104,000.00 - N300,012,000.00",
-        "loanRepay": "523,900"
-      },
-      "Socials": {
-        "Twitter": "@gabriellehall",
-        "Facebook": "Carney Shelton",
-        "Instagram": "@ortizmoody"
-      },
-      "Guarantor": {
-        "FullName": "Jane Riggs",
-        "PhoneNumber": "+1 (868) 479-3914",
-        "Email": "janeriggs@twiist.com",
-        "Relationship": "Sister"
-      }
+    "guarantor": {
+      "fullName": "Jenkins Thomas",
+      "phoneNumber": "+1 (908) 402-2147",
+      "email": "jenkinsthomas@biolive.com",
+      "relationship": "Mother"
     }
-  ]
-}
+  },
+  {
+    "userId": "3b4c67146",
+    "organization": "ZILLIDIUM",
+    "personalInfo": {
+      "fullName": "Compton Bennett",
+      "bvn": 75751709329,
+      "gender": "male",
+      "email": "comptonbennett@zillidium.com",
+      "phoneNumber": "+1 (863) 416-2246",
+      "maritalStatus": "Married",
+      "children": 3,
+      "typeOfResidence": "House"
+    },
+    "username": "kaseymacias",
+    "dateJoined": "2019-05-23",
+    "status": "blacklisted",
+    "loanAmount": 722176,
+    "bankAccount": 8664373297,
+    "bankName": "City Bank",
+    "educationalInfo": {
+      "level": "PhD",
+      "employmentStatus": "Employed",
+      "sector": "Health",
+      "duration": "9 months",
+      "officeEmail": "kaseymacias@zillidium.com",
+      "monthlyIncome": "N109,104,000.00 - N300,012,000.00",
+      "loanRepay": "40,000"
+    },
+    "socials": {
+      "twitter": "@gretacoffey",
+      "facebook": "Shaffer Hogan",
+      "instagram": "@nolanhester"
+    },
+    "guarantor": {
+      "fullName": "Shari Holden",
+      "phoneNumber": "+1 (956) 526-3004",
+      "email": "shariholden@zillidium.com",
+      "relationship": "Husband"
+    }
+  },
+  {
+    "userId": "f1c178068",
+    "organization": "KOFFEE",
+    "personalInfo": {
+      "fullName": "Melisa Barber",
+      "bvn": 16411597458,
+      "gender": "female",
+      "email": "melisabarber@koffee.com",
+      "phoneNumber": "+1 (861) 557-2537",
+      "maritalStatus": "Divorced",
+      "children": 1,
+      "typeOfResidence": "Townhouse"
+    },
+    "username": "gwendolynmelendez",
+    "dateJoined": "2024-03-10",
+    "status": "inactive",
+    "loanAmount": 551460,
+    "bankAccount": 4149329223,
+    "bankName": "First National Bank",
+    "educationalInfo": {
+      "level": "HND",
+      "employmentStatus": "Employed",
+      "sector": "FinTech",
+      "duration": "9 months",
+      "officeEmail": "gwendolynmelendez@koffee.com",
+      "monthlyIncome": "N110,000.00 - N345,000.00",
+      "loanRepay": "47,100"
+    },
+    "socials": {
+      "twitter": "@altagentry",
+      "facebook": "Knapp Rowland",
+      "instagram": "@tiamcdonald"
+    },
+    "guarantor": {
+      "fullName": "Florence Stafford",
+      "phoneNumber": "+1 (945) 566-3010",
+      "email": "florencestafford@koffee.com",
+      "relationship": "Brother"
+    }
+  },
+  {
+    "userId": "0aad60ac7",
+    "organization": "JIMBIES",
+    "personalInfo": {
+      "fullName": "Lana Garner",
+      "bvn": 69855540873,
+      "gender": "female",
+      "email": "lanagarner@jimbies.com",
+      "phoneNumber": "+1 (962) 550-2149",
+      "maritalStatus": "Married",
+      "children": 2,
+      "typeOfResidence": "Apartment"
+    },
+    "username": "carlenewalton",
+    "dateJoined": "2018-11-14",
+    "status": "active",
+    "loanAmount": 405417,
+    "bankAccount": 4128287338,
+    "bankName": "Union Bank",
+    "educationalInfo": {
+      "level": "PhD",
+      "employmentStatus": "Employed",
+      "sector": "Health",
+      "duration": "1 year",
+      "officeEmail": "carlenewalton@jimbies.com",
+      "monthlyIncome": "N200,000.00 - N300,000.00",
+      "loanRepay": "1,000,000"
+    },
+    "socials": {
+      "twitter": "@lillianoliver",
+      "facebook": "Kaye Todd",
+      "instagram": "@liliansweeney"
+    },
+    "guarantor": {
+      "fullName": "Jennifer Dejesus",
+      "phoneNumber": "+1 (931) 539-3719",
+      "email": "jenniferdejesus@jimbies.com",
+      "relationship": "Mother"
+    }
+  },
+  {
+    "userId": "10f60d68e",
+    "organization": "OPTIQUE",
+    "personalInfo": {
+      "fullName": "Rosario Stokes",
+      "bvn": 83425844728,
+      "gender": "male",
+      "email": "rosariostokes@optique.com",
+      "phoneNumber": "+1 (930) 450-2209",
+      "maritalStatus": "Single",
+      "children": 2,
+      "typeOfResidence": "Townhouse"
+    },
+    "username": "mccormickschroeder",
+    "dateJoined": "2024-01-16",
+    "status": "active",
+    "loanAmount": 115980,
+    "bankAccount": 9843397523,
+    "bankName": "Capital One",
+    "educationalInfo": {
+      "level": "B.Sc",
+      "employmentStatus": "Unemployed",
+      "sector": "Construction",
+      "duration": "9 months",
+      "officeEmail": "mccormickschroeder@optique.com",
+      "monthlyIncome": "N10,100.00 - N50,003.00",
+      "loanRepay": "62,000"
+    },
+    "socials": {
+      "twitter": "@lorasolomon",
+      "facebook": "Melanie Livingston",
+      "instagram": "@patsyguy"
+    },
+    "guarantor": {
+      "fullName": "Lorena Cain",
+      "phoneNumber": "+1 (915) 468-3404",
+      "email": "lorenacain@optique.com",
+      "relationship": "Brother"
+    }
+  },
+  {
+    "userId": "a3596c5b7",
+    "organization": "EXOTECHNO",
+    "personalInfo": {
+      "fullName": "Nelson Rodriguez",
+      "bvn": 70138017760,
+      "gender": "male",
+      "email": "nelsonrodriguez@exotechno.com",
+      "phoneNumber": "+1 (989) 463-2352",
+      "maritalStatus": "Married",
+      "children": 0,
+      "typeOfResidence": "Condo"
+    },
+    "username": "corneliamcbride",
+    "dateJoined": "2021-01-29",
+    "status": "blacklisted",
+    "loanAmount": 766420,
+    "bankAccount": 3005307553,
+    "bankName": "Wells Fargo",
+    "educationalInfo": {
+      "level": "HND",
+      "employmentStatus": "Unemployed",
+      "sector": "Health",
+      "duration": "4 years",
+      "officeEmail": "corneliamcbride@exotechno.com",
+      "monthlyIncome": "N121,400.00 - N410,090.00",
+      "loanRepay": "1,000,000"
+    },
+    "socials": {
+      "twitter": "@wallermejia",
+      "facebook": "Hudson Guerrero",
+      "instagram": "@fitzpatrickknox"
+    },
+    "guarantor": {
+      "fullName": "Gould Kane",
+      "phoneNumber": "+1 (830) 440-3474",
+      "email": "gouldkane@exotechno.com",
+      "relationship": "Father"
+    }
+  },
+  {
+    "userId": "e489f4e8f",
+    "organization": "ANIVET",
+    "personalInfo": {
+      "fullName": "Leanne Kline",
+      "bvn": 52403994238,
+      "gender": "female",
+      "email": "leannekline@anivet.com",
+      "phoneNumber": "+1 (934) 487-2170",
+      "maritalStatus": "Married",
+      "children": 0,
+      "typeOfResidence": "Condo"
+    },
+    "username": "daphnemcdaniel",
+    "dateJoined": "2018-05-18",
+    "status": "inactive",
+    "loanAmount": 560751,
+    "bankAccount": 2690990947,
+    "bankName": "Wells Fargo",
+    "educationalInfo": {
+      "level": "PhD",
+      "employmentStatus": "Employed",
+      "sector": "Health",
+      "duration": "9 months",
+      "officeEmail": "daphnemcdaniel@anivet.com",
+      "monthlyIncome": "N109,104,000.00 - N300,012,000.00",
+      "loanRepay": "40,000"
+    },
+    "socials": {
+      "twitter": "@lacyosborne",
+      "facebook": "Graciela Reeves",
+      "instagram": "@watkinswaters"
+    },
+    "guarantor": {
+      "fullName": "Kirby Williams",
+      "phoneNumber": "+1 (956) 593-3653",
+      "email": "kirbywilliams@anivet.com",
+      "relationship": "Mother"
+    }
+  },
+  {
+    "userId": "fa059dfb4",
+    "organization": "RONBERT",
+    "personalInfo": {
+      "fullName": "Whitaker Meyer",
+      "bvn": 41296570769,
+      "gender": "male",
+      "email": "whitakermeyer@ronbert.com",
+      "phoneNumber": "+1 (921) 565-3272",
+      "maritalStatus": "Widowed",
+      "children": 2,
+      "typeOfResidence": "Condo"
+    },
+    "username": "lydiabranch",
+    "dateJoined": "2023-01-08",
+    "status": "inactive",
+    "loanAmount": 489925,
+    "bankAccount": 8454276136,
+    "bankName": "American National Bank",
+    "educationalInfo": {
+      "level": "PhD",
+      "employmentStatus": "Employed",
+      "sector": "Engineering",
+      "duration": "2 years",
+      "officeEmail": "lydiabranch@ronbert.com",
+      "monthlyIncome": "N10,100.00 - N50,003.00",
+      "loanRepay": "120,999"
+    },
+    "socials": {
+      "twitter": "@spencerle",
+      "facebook": "Clements Matthews",
+      "instagram": "@anitaterry"
+    },
+    "guarantor": {
+      "fullName": "Cecile Jennings",
+      "phoneNumber": "+1 (936) 461-3292",
+      "email": "cecilejennings@ronbert.com",
+      "relationship": "Mother"
+    }
+  },
+  {
+    "userId": "843a88548",
+    "organization": "ACCUFARM",
+    "personalInfo": {
+      "fullName": "Nadine Hebert",
+      "bvn": 27470097841,
+      "gender": "female",
+      "email": "nadinehebert@accufarm.com",
+      "phoneNumber": "+1 (984) 427-2098",
+      "maritalStatus": "Divorced",
+      "children": 3,
+      "typeOfResidence": "Apartment"
+    },
+    "username": "pageneal",
+    "dateJoined": "2024-01-27",
+    "status": "inactive",
+    "loanAmount": 899553,
+    "bankAccount": 9257408429,
+    "bankName": "City Bank",
+    "educationalInfo": {
+      "level": "B.Sc",
+      "employmentStatus": "Employed",
+      "sector": "Engineering",
+      "duration": "4 years",
+      "officeEmail": "pageneal@accufarm.com",
+      "monthlyIncome": "N121,400.00 - N410,090.00",
+      "loanRepay": "40,000"
+    },
+    "socials": {
+      "twitter": "@besthayes",
+      "facebook": "Elisa Hodges",
+      "instagram": "@genevabowen"
+    },
+    "guarantor": {
+      "fullName": "Hensley Thompson",
+      "phoneNumber": "+1 (865) 561-3597",
+      "email": "hensleythompson@accufarm.com",
+      "relationship": "Wife"
+    }
+  },
+  {
+    "userId": "26d5cca4e",
+    "organization": "RUGSTARS",
+    "personalInfo": {
+      "fullName": "Curtis Bonner",
+      "bvn": 37256569934,
+      "gender": "male",
+      "email": "curtisbonner@rugstars.com",
+      "phoneNumber": "+1 (868) 528-2244",
+      "maritalStatus": "Divorced",
+      "children": "None",
+      "typeOfResidence": "House"
+    },
+    "username": "darlacruz",
+    "dateJoined": "2018-01-12",
+    "status": "blacklisted",
+    "loanAmount": 741114,
+    "bankAccount": 6936096529,
+    "bankName": "Union Bank",
+    "educationalInfo": {
+      "level": "B.Sc",
+      "employmentStatus": "Employed",
+      "sector": "Health",
+      "duration": "10 years",
+      "officeEmail": "darlacruz@rugstars.com",
+      "monthlyIncome": "N109,104,000.00 - N300,012,000.00",
+      "loanRepay": "12,000"
+    },
+    "socials": {
+      "twitter": "@griffinmcfarland",
+      "facebook": "Olga House",
+      "instagram": "@brigittewitt"
+    },
+    "guarantor": {
+      "fullName": "Reyna Fischer",
+      "phoneNumber": "+1 (999) 567-2565",
+      "email": "reynafischer@rugstars.com",
+      "relationship": "Wife"
+    }
+  }
+]}
