@@ -1,13 +1,14 @@
 import './BaseField.scss';
+import { ReactNode } from 'react';
 
 type BaseFieldProps = {
+  icon?: string | ReactNode;
   placeholder?: string;
   value?: string;
   type?: 'text' | 'password' | 'email';
-  isPassword?: boolean;
 };
 
-export const BaseField = ({ placeholder, value, type, isPassword }: BaseFieldProps) => (
+export const BaseField = ({ icon, placeholder, value, type }: BaseFieldProps) => (
   <div className="d-flex align-items-center border-primary width-100 border-radius px-2">
     <input
       placeholder={placeholder}
@@ -15,8 +16,6 @@ export const BaseField = ({ placeholder, value, type, isPassword }: BaseFieldPro
       type={type}
       className="width-100 border-none outline-none font-small input-field text-color-primary fw-normal"
     />
-    {isPassword && (
-      <p className="font-smaller text-color-tertiary fw-medium letter-spacing">SHOW</p>
-    )}
+    <div className="font-smaller text-color-tertiary fw-medium letter-spacing">{icon}</div>
   </div>
 );

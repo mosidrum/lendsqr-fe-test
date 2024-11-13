@@ -27,7 +27,7 @@ export const Login = () => {
           </div>
           <div className="d-flex flex-dir-column gap-3 mt-4">
             <BaseField placeholder="Email" />
-            <BaseField placeholder="Password" isPassword />
+            <BaseField placeholder="Password" icon="SHOW" />
             <div className="font-smaller text-color-tertiary fw-medium letter-spacing">
               FORGOT PASSWORD?
             </div>
