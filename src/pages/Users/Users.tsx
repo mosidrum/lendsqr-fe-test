@@ -3,7 +3,7 @@ import { dashboardCardData } from '../Dashboard';
 import './User.scss';
 import { Card, CustomPagination, DataTable } from '../../components';
 import { fetcher } from '../../api';
-import { useEffect, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import { User } from '../../types';
 import { FaChevronDown } from 'react-icons/fa6';
 
@@ -12,13 +12,28 @@ const endpoint = 'https://run.mocky.io/v3/f351ee48-b820-41ee-b0d4-e61a8696dd56';
 export const Users = () => {
   const { data } = useSWR(endpoint, fetcher);
   const [users, setUsers] = useState<User[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const recordsPerPage = 10;
 
   useEffect(() => {
     const storedUsers = localStorage.getItem('users');
-    storedUsers
-      ? setUsers(JSON.parse(storedUsers))
-      : data?.users && localStorage.setItem('users', JSON.stringify(data.users));
+    if (storedUsers) {
+      setUsers(JSON.parse(storedUsers));
+    } else if (data?.users) {
+      setUsers(data.users);
+      localStorage.setItem('users', JSON.stringify(data.users));
+    }
   }, [data]);
+
+  const getCurrentPageUsers = () => {
+    const startIndex = (currentPage - 1) * recordsPerPage;
+    const endIndex = startIndex + recordsPerPage;
+    return users.slice(startIndex, endIndex);
+  };
+
+  const handlePageChange = (_: ChangeEvent<unknown>, page: number) => {
+    setCurrentPage(page);
+  };
 
   return (
     <div className="">
@@ -35,17 +50,24 @@ export const Users = () => {
             />
           ))}
         </div>
-        <DataTable users={users} />
+        <DataTable users={getCurrentPageUsers()} />
         <div className="d-flex justify-content-between align-items-center">
           <div className="d-flex align-items-center font-small">
             Showing
             <p className="d-flex align-items-center gap-2 pagi mx-1">
-              <span className="text-color-secondary">100</span>
-              <FaChevronDown className="text-color-primary" size={10} />
+              <span className="text-color-secondary">
+                {Math.min(currentPage * recordsPerPage, users.length)}
+              </span>
+              <FaChevronDown className="ml-n1 text-color-primary" size={10} />
             </p>
-            out of 100
+            out of {users.length}
           </div>
-          <CustomPagination />
+
+          <CustomPagination
+            count={Math.ceil(users.length / recordsPerPage)}
+            page={currentPage}
+            onChange={handlePageChange}
+          />
         </div>
       </div>
     </div>
