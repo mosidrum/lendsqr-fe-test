@@ -3,7 +3,7 @@ import { dashboardCardData } from '../Dashboard';
 import './User.scss';
 import { Card, CustomPagination, DataTable } from '../../components';
 import { fetcher } from '../../api';
-import { ChangeEvent, useEffect, useState } from 'react';
+import { ChangeEvent, useEffect, useState, useRef } from 'react';
 import { User } from '../../types';
 import { FaChevronDown } from 'react-icons/fa6';
 
@@ -14,15 +14,15 @@ export const Users = () => {
   const [users, setUsers] = useState<User[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const recordsPerPage = 10;
+  const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const storedUsers = localStorage.getItem('users');
-    if (storedUsers) {
-      setUsers(JSON.parse(storedUsers));
-    } else if (data?.users) {
-      setUsers(data.users);
-      localStorage.setItem('users', JSON.stringify(data.users));
-    }
+    storedUsers
+      ? setUsers(JSON.parse(storedUsers))
+      : data?.users
+        ? localStorage.setItem('users', JSON.stringify(data.users))
+        : null;
   }, [data]);
 
   const getCurrentPageUsers = () => {
@@ -33,13 +33,19 @@ export const Users = () => {
 
   const handlePageChange = (_: ChangeEvent<unknown>, page: number) => {
     setCurrentPage(page);
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
     <div className="">
       <div className="font-larger text-color-secondary mb-4 fw-medium">Users</div>
       <div className="d-flex flex-dir-column gap-3">
-        <div className="cards-container d-flex align-items-center justify-content-between gap-4">
+        <div
+          className="cards-container d-flex align-items-center justify-content-between gap-4"
+          ref={ref}
+        >
           {dashboardCardData.map((item, index) => (
             <Card
               key={index}
@@ -50,7 +56,9 @@ export const Users = () => {
             />
           ))}
         </div>
-        <DataTable users={getCurrentPageUsers()} />
+        <div>
+          <DataTable users={getCurrentPageUsers()} />
+        </div>
         <div className="d-flex justify-content-between align-items-center">
           <div className="d-flex align-items-center font-small">
             Showing

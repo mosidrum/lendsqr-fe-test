@@ -4,10 +4,12 @@ import { UserDetailsCard } from '../../components';
 import { useNavigate, useParams } from 'react-router-dom';
 import { InfoSection } from './InfoSection.tsx';
 import { User } from '../../types';
+import { useEffect, useRef } from 'react';
 
 export const UserDetails = () => {
   const navigate = useNavigate();
   const params = useParams();
+  const ref = useRef<HTMLDivElement | null>(null);
   const { id } = params;
   const storedUsers = localStorage.getItem('users');
   const users = storedUsers ? JSON.parse(storedUsers) : [];
@@ -117,6 +119,10 @@ export const UserDetails = () => {
     }
   ];
 
+  useEffect(() => {
+    ref?.current?.scrollIntoView({ behavior: 'smooth' });
+  }, []);
+
   return (
     <div className="background-gray">
       <div className="d-flex gap-1 align-items-center cursor-pointer" onClick={() => navigate(-1)}>
@@ -130,7 +136,7 @@ export const UserDetails = () => {
           <button className="activate font-small">ACTIVATE USER</button>
         </div>
       </div>
-      <div className="d-flex flex-dir-column gap-3">
+      <div className="d-flex flex-dir-column gap-3" ref={ref}>
         <UserDetailsCard
           name={userInfo?.fullName}
           userId={data?.userId}
