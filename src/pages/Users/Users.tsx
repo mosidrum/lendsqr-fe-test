@@ -1,11 +1,11 @@
 import useSWR from 'swr';
-import { FaChevronDown } from 'react-icons/fa6';
 import { dashboardCardData } from '../Dashboard';
 import './User.scss';
 import { Card, CustomPagination, DataTable } from '../../components';
 import { fetcher } from '../../api';
 import { useEffect, useState } from 'react';
 import { User } from '../../types';
+import { FaChevronDown } from 'react-icons/fa6';
 
 const endpoint = 'https://run.mocky.io/v3/f351ee48-b820-41ee-b0d4-e61a8696dd56';
 
@@ -15,11 +15,9 @@ export const Users = () => {
 
   useEffect(() => {
     const storedUsers = localStorage.getItem('users');
-    !storedUsers && data
-      ? (localStorage.setItem('users', JSON.stringify(data?.users)), setUsers(data.users))
-      : storedUsers
-        ? setUsers(JSON.parse(storedUsers))
-        : null;
+    storedUsers
+      ? setUsers(JSON.parse(storedUsers))
+      : data?.users && localStorage.setItem('users', JSON.stringify(data.users));
   }, [data]);
 
   return (

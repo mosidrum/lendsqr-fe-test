@@ -3,19 +3,22 @@ import user from '../../assets/icons/dash-users.svg';
 import active from '../../assets/icons/active-users.svg';
 import loan from '../../assets/icons/users-loan.svg';
 import savings from '../../assets/icons/user-savings.svg';
+import { User } from '../../types';
 
 const storedUsers = localStorage.getItem('users');
+const users = storedUsers ? JSON.parse(storedUsers) : [];
+const activeUsers = users.filter((user: User) => user.status === 'active');
 
 export const dashboardCardData: CardProps[] = [
   {
     title: 'USERS',
-    count: storedUsers?.length,
+    count: users?.length,
     icon: user,
     background: '#fce8ff'
   },
   {
     title: 'ACTIVE USERS',
-    count: '2453',
+    count: activeUsers.length,
     icon: active,
     background: '#eee8ff'
   },

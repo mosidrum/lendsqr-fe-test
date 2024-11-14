@@ -49,7 +49,6 @@ const tableHeadData = [
 export const DataTable = ({ users }: TableDataProps) => {
   const [openPopupIndex, setOpenPopupIndex] = useState<number | null>(null);
   const [openFilter, setOpenFilter] = useState<boolean>(false);
-
   const navigate = useNavigate();
 
   const handlePopupToggle = (index: number) => {
