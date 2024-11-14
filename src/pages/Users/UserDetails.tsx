@@ -1,10 +1,10 @@
+import { useEffect, useRef } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import { BsArrowLeft } from 'react-icons/bs';
 import './UserDetails.scss';
 import { UserDetailsCard } from '../../components';
-import { useNavigate, useParams } from 'react-router-dom';
 import { InfoSection } from './InfoSection.tsx';
 import { User } from '../../types';
-import { useEffect, useRef } from 'react';
 
 export const UserDetails = () => {
   const navigate = useNavigate();

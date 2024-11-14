@@ -1,4 +1,4 @@
 export const formatToNaira = (digit?: number) => {
-  if (!digit) return;
+  if (digit == null) return '';
   return `N${digit.toLocaleString()}`;
 };

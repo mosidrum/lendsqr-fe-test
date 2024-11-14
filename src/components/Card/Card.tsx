@@ -1,5 +1,5 @@
-import { CardProps } from '../../pages';
 import './Card.scss';
+import { CardProps } from '../../types';
 
 export const Card = ({ icon, title, count, background }: CardProps) => (
   <div className="card-wrapper d-flex flex-dir-column gap-1">
