@@ -1,50 +1,98 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Lendsqr Dashboard
 
-Currently, two official plugins are available:
+This project is a web-based dashboard built for Lendsqr. It features a user-friendly interface for managing loan applications, user profiles, and more. The application is built using React, TypeScript, and a range of modern web development tools. It also integrates with APIs to fetch and display user data, ensuring a smooth and dynamic user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **User Management**: View and manage users, including their loan statuses.
+- **Responsive Design**: Optimized for both desktop and mobile screens, with a collapsible sidebar on mobile devices.
+- **Search Functionality**: Includes a search box to quickly filter user data.
+- **Notifications**: Displays notifications related to the users or system updates.
+- **API Integration**: Fetches user data dynamically from an external API and stores it locally for offline use.
+- **Dynamic Sidebar**: Sidebar visibility is toggled with a hamburger menu on mobile screens.
+- **Customizable Layout**: Sidebar, header, and main content sections adjust based on the screen size and user actions.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tech Stack
 
-- Configure the top-level `parserOptions` property like this:
+- **Frontend**:
+  - React
+  - TypeScript
+  - CSS/Sass
+  - React Router
+  - React Icons
+  - `useSWR` for data fetching
+  - `jest` for unit testing
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Backend**:
+  - APIs for fetching user data (integrated through SWR)
+
+## Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/lendsqr-dashboard.git
+   cd lendsqr-dashboard
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   yarn install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   yarn start
+   ```
+
+   This will launch the app at `http://localhost:3000`.
+
+## Running Tests
+
+To run the tests using Jest, run the following command:
+
+```bash
+yarn test
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Make sure that the tests are set up in the `__tests__` folder or wherever you have organized your test files.
 
-```js
-// .eslintrc.json
-import react from 'eslint-plugin-react'
+## File Structure
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- `src/` – Contains all the application source code
+  - `components/` – Reusable UI components like buttons, forms, etc.
+  - `pages/` – Contains page components like Dashboard, User Management, etc.
+  - `assets/` – Stores static files like images, fonts, etc.
+  - `hooks/` – Custom hooks for reusable logic
+  - `utils/` – Utility functions
+  - `App.tsx` – Main entry point for the React app
+  - `index.tsx` – Renders the React app
+  - `styles/` – Global CSS/Sass styles
+  - `setupTest.ts` – Jest setup for testing
+
+## Configuration
+
+### Jest Setup
+
+The project uses Jest for unit testing with TypeScript. You can customize the Jest configuration in the `jest.config.ts` file.
+
+### API Integration
+
+Data is fetched from an external endpoint using the `useSWR` hook, with data stored in `localStorage` for offline access. The component will fetch new data whenever the stored data is cleared or unavailable.
+
+## Contributing
+
+Feel free to fork this repository and create a pull request with your changes. We welcome contributions!
+
+1. Fork the repository
+2. Create a new branch
+3. Make your changes
+4. Run the tests to ensure everything works
+5. Create a pull request
+
+## License
+
+This project is licensed under the MIT License.
