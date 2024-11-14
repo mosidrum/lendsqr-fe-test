@@ -2,16 +2,17 @@ import { BsArrowLeft } from 'react-icons/bs';
 import './UserDetails.scss';
 import { UserDetailsCard } from '../../components';
 import { useNavigate, useParams } from 'react-router-dom';
-import mockedJSONData from '../../data/mockData.json';
 import { InfoSection } from './InfoSection.tsx';
+import { User } from '../../types';
 
 export const UserDetails = () => {
   const navigate = useNavigate();
   const params = useParams();
   const { id } = params;
-  const mockData = mockedJSONData.users;
+  const storedUsers = localStorage.getItem('users');
+  const users = storedUsers ? JSON.parse(storedUsers) : [];
 
-  const data = mockData.find((user) => user.userId === id);
+  const data = users.find((user: User) => user.userId === id);
   const userInfo = data?.personalInfo;
   const eduInfo = data?.educationalInfo;
   const socials = data?.socials;
