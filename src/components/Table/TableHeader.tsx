@@ -1,7 +1,6 @@
-import { IconButton, Tooltip } from '@mui/material';
-import FilterListIcon from '@mui/icons-material/FilterList';
 import TableCell from '@mui/material/TableCell';
 import { styled } from '@mui/material/styles';
+import { IoFilterOutline } from 'react-icons/io5';
 
 type TableHeadProps = {
   title: string;
@@ -18,14 +17,12 @@ const CustomTableCell = styled(TableCell)({
 });
 
 export const TableHeader = ({ title, isLastItem, onClick }: TableHeadProps) => (
-  <CustomTableCell align="left" size="small" className="text-color-primary font-small">
-    {title}
-    {isLastItem ? null : (
-      <Tooltip title="filter table">
-        <IconButton onClick={onClick}>
-          <FilterListIcon />
-        </IconButton>
-      </Tooltip>
-    )}
+  <CustomTableCell align="left" size="small" className="text-color-primary">
+    <div className="d-flex align-items-center gap-1 my-1">
+      <div className="fw-bold">{title}</div>
+      {isLastItem ? null : (
+        <IoFilterOutline onClick={onClick} className="cursor-pointer" size={20} fontWeight={500} />
+      )}
+    </div>
   </CustomTableCell>
 );

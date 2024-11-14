@@ -1,8 +1,9 @@
 import './Dashboard.scss';
+import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { IoIosNotificationsOutline, IoMdArrowDropdown } from 'react-icons/io';
+import { LiaTimesSolid } from 'react-icons/lia';
 import { FiMenu } from 'react-icons/fi';
-
 import { Logo, SearchBox } from '../../components';
 import user from '../../assets/user.png';
 import { SideBar } from './SideBar.tsx';
@@ -10,7 +11,11 @@ import { useMobileScreen } from '../../hooks';
 
 export const Dashboard = () => {
   const isMobileScreen = useMobileScreen();
-  console.log(isMobileScreen);
+  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarVisible(!isSidebarVisible);
+  };
 
   return (
     <div className="dashboard-layout">
@@ -20,7 +25,23 @@ export const Dashboard = () => {
         >
           <Logo />
           {isMobileScreen ? (
-            <FiMenu size={30} color="#213f7d" className="cursor-pointer" />
+            <>
+              {isSidebarVisible ? (
+                <LiaTimesSolid
+                  size={30}
+                  color="#213f7d"
+                  className="cursor-pointer"
+                  onClick={toggleSidebar}
+                />
+              ) : (
+                <FiMenu
+                  size={30}
+                  color="#213f7d"
+                  className="cursor-pointer"
+                  onClick={toggleSidebar}
+                />
+              )}
+            </>
           ) : (
             <SearchBox />
           )}
@@ -35,9 +56,19 @@ export const Dashboard = () => {
           </div>
         )}
       </header>
-      <aside className="sidebar p-1 width-100 background-white">
-        <SideBar />
-      </aside>
+
+      {isMobileScreen && isSidebarVisible && (
+        <aside className="sidebar p-1 width-100 background-white">
+          <SideBar />
+        </aside>
+      )}
+
+      {!isMobileScreen && (
+        <aside className="sidebar p-1 width-100 background-white">
+          <SideBar />
+        </aside>
+      )}
+
       <main className="content">
         <Outlet />
       </main>

@@ -144,7 +144,7 @@ export const UserDetails = () => {
           bankName={data?.bankName}
           amount={data?.loanAmount}
         />
-        <div className="p-3 background-white">
+        <div className="p-3 background-white wrap">
           <InfoSection sectionTitle="Personal Information" data={personalInformation} />
           <hr className="line-straight" />
           <InfoSection sectionTitle="Education and Employment" data={educationalInfo} />

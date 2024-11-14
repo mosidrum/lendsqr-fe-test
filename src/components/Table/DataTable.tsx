@@ -16,6 +16,7 @@ import { Filter } from '../Filter';
 import { textToLowerCase } from '../../utils';
 import { StatusBadge } from './StatusBadge.tsx';
 import { paths } from '../../routes/paths.ts';
+import { useMobileScreen } from '../../hooks';
 
 type TableDataProps = {
   users: User[];
@@ -36,20 +37,24 @@ const StyledTableRow = styled(TableRow)(() => ({
   }
 }));
 
-const tableHeadData = [
-  'ORGANISATION',
-  'USERNAME',
-  'EMAIL',
-  'PHONE NUMBER',
-  'DATE JOINED',
-  'STATUS',
-  ''
-];
-
 export const DataTable = ({ users }: TableDataProps) => {
   const [openPopupIndex, setOpenPopupIndex] = useState<number | null>(null);
   const [openFilter, setOpenFilter] = useState<boolean>(false);
   const navigate = useNavigate();
+  const isMobileScreen = useMobileScreen();
+
+  const tableHeadData = [
+    'ORGANISATION',
+    'USERNAME',
+    'EMAIL',
+    'PHONE NUMBER',
+    'DATE JOINED',
+    'STATUS',
+    ''
+  ];
+
+  const tableHeadData2 = ['ORGANISATION', 'USERNAME', 'EMAIL'];
+  const tableHeaders = isMobileScreen ? tableHeadData2 : tableHeadData;
 
   const handlePopupToggle = (index: number) => {
     setOpenPopupIndex(openPopupIndex === index ? null : index);
@@ -60,7 +65,7 @@ export const DataTable = ({ users }: TableDataProps) => {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow style={{ position: 'relative' }}>
-            {tableHeadData.map((header, index) => (
+            {tableHeaders.map((header, index) => (
               <TableHeader
                 title={header}
                 key={index}
@@ -77,13 +82,18 @@ export const DataTable = ({ users }: TableDataProps) => {
               <StyledTableCell>{user.organization}</StyledTableCell>
               <StyledTableCell align="left">{user.username}</StyledTableCell>
               <StyledTableCell align="left">{user.personalInfo.email}</StyledTableCell>
-              <StyledTableCell align="left">{user.personalInfo.phoneNumber}</StyledTableCell>
-              <StyledTableCell align="left">{textToLowerCase(user.dateJoined)}</StyledTableCell>
-              <StyledTableCell align="left">
-                <div style={{ display: 'flex', justifyContent: 'center' }}>
-                  <StatusBadge status={user.status} />
-                </div>
-              </StyledTableCell>
+              {!isMobileScreen && (
+                <>
+                  <StyledTableCell align="left">{user.personalInfo.phoneNumber}</StyledTableCell>
+                  <StyledTableCell align="left">{textToLowerCase(user.dateJoined)}</StyledTableCell>
+                  <StyledTableCell align="left">
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                      <StatusBadge status={user.status} />
+                    </div>
+                  </StyledTableCell>
+                </>
+              )}
+
               <StyledTableCell align="left" style={{ position: 'relative' }}>
                 <BsThreeDotsVertical
                   className="cursor-pointer"
