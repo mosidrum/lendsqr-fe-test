@@ -4,10 +4,18 @@ import { dashboardCardData } from '../Dashboard';
 import './User.scss';
 import { Card, CustomPagination, DataTable } from '../../components';
 import { fetcher } from '../../api';
-import { User } from '../../types';
+import { useEffect } from 'react';
+
+const endpoint = 'https://run.mocky.io/v3/f351ee48-b820-41ee-b0d4-e61a8696dd56';
 
 export const Users = () => {
-  const { data, error } = useSWR<User[]>('http://localhost:3001/users', fetcher);
+  const { data, error } = useSWR(endpoint, fetcher);
+
+  useEffect(() => {
+    if (data) {
+      localStorage.setItem('users', JSON.stringify(data?.users));
+    }
+  }, [data]);
 
   if (error) return <div>Failed to load data</div>;
   if (!data) return <div>Loading...</div>;
@@ -27,7 +35,7 @@ export const Users = () => {
             />
           ))}
         </div>
-        <DataTable users={data} />
+        <DataTable users={data?.users} />
         <div className="d-flex justify-content-between align-items-center">
           <div className="d-flex align-items-center font-small">
             Showing
