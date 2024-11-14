@@ -4,10 +4,12 @@ import active from '../../assets/icons/active-users.svg';
 import loan from '../../assets/icons/users-loan.svg';
 import savings from '../../assets/icons/user-savings.svg';
 
+const storedUsers = localStorage.getItem('users');
+
 export const dashboardCardData: CardProps[] = [
   {
     title: 'USERS',
-    count: '2453',
+    count: storedUsers?.length,
     icon: user,
     background: '#fce8ff'
   },

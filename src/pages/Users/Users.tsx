@@ -4,21 +4,27 @@ import { dashboardCardData } from '../Dashboard';
 import './User.scss';
 import { Card, CustomPagination, DataTable } from '../../components';
 import { fetcher } from '../../api';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { User } from '../../types';
 
 const endpoint = 'https://run.mocky.io/v3/f351ee48-b820-41ee-b0d4-e61a8696dd56';
 
 export const Users = () => {
   const { data, error } = useSWR(endpoint, fetcher);
+  const [users, setUsers] = useState<User[]>([]);
 
   useEffect(() => {
-    if (data) {
+    const storedUsers = localStorage.getItem('users');
+    if (storedUsers) {
+      setUsers(JSON.parse(storedUsers));
+    } else if (data) {
       localStorage.setItem('users', JSON.stringify(data?.users));
+      setUsers(data.users);
     }
   }, [data]);
 
   if (error) return <div>Failed to load data</div>;
-  if (!data) return <div>Loading...</div>;
+  if (!data && !users.length) return <div>Loading...</div>;
 
   return (
     <div className="">
@@ -35,11 +41,11 @@ export const Users = () => {
             />
           ))}
         </div>
-        <DataTable users={data?.users} />
+        <DataTable users={users} />
         <div className="d-flex justify-content-between align-items-center">
           <div className="d-flex align-items-center font-small">
             Showing
-            <p className=" d-flex align-items-center gap-2 pagi mx-1">
+            <p className="d-flex align-items-center gap-2 pagi mx-1">
               <span className="text-color-secondary">100</span>
               <FaChevronDown className="text-color-primary" size={10} />
             </p>
