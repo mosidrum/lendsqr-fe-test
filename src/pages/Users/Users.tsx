@@ -10,21 +10,17 @@ import { User } from '../../types';
 const endpoint = 'https://run.mocky.io/v3/f351ee48-b820-41ee-b0d4-e61a8696dd56';
 
 export const Users = () => {
-  const { data, error } = useSWR(endpoint, fetcher);
+  const { data } = useSWR(endpoint, fetcher);
   const [users, setUsers] = useState<User[]>([]);
 
   useEffect(() => {
     const storedUsers = localStorage.getItem('users');
-    if (storedUsers) {
-      setUsers(JSON.parse(storedUsers));
-    } else if (data) {
-      localStorage.setItem('users', JSON.stringify(data?.users));
-      setUsers(data.users);
-    }
+    !storedUsers && data
+      ? (localStorage.setItem('users', JSON.stringify(data?.users)), setUsers(data.users))
+      : storedUsers
+        ? setUsers(JSON.parse(storedUsers))
+        : null;
   }, [data]);
-
-  if (error) return <div>Failed to load data</div>;
-  if (!data && !users.length) return <div>Loading...</div>;
 
   return (
     <div className="">
