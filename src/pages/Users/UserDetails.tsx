@@ -12,18 +12,109 @@ export const UserDetails = () => {
   const mockData = mockedJSONData.users;
 
   const data = mockData.find((user) => user.userId === id);
-  console.log(data);
+  const userInfo = data?.personalInfo;
+  const eduInfo = data?.educationalInfo;
+  const socials = data?.socials;
+  const guarantor = data?.guarantor;
 
-  // const personalInformation = [
-  //   {
-  //     label: 'FULL NAME',
-  //     data: data?.fullName
-  //   },
-  //   {
-  //     label: 'PHONE NUMBER',
-  //     data: data?.personalInfo.phoneNumber
-  //   }
-  // ];
+  const guarantorInfo = [
+    {
+      label: 'FULL NAME',
+      data: guarantor?.fullName || 'N/A'
+    },
+    {
+      label: 'PHONE NUMBER',
+      data: guarantor?.phoneNumber || 'N/A'
+    },
+    {
+      label: 'EMAIL ADDRESS',
+      data: guarantor?.email || 'N/A'
+    },
+    {
+      label: 'RELATIONSHIP',
+      data: guarantor?.relationship || ''
+    }
+  ];
+
+  const socialInfo = [
+    {
+      label: 'TWITTER',
+      data: socials?.twitter || 'N/A'
+    },
+    {
+      label: 'FACEBOOK',
+      data: socials?.facebook || 'N/A'
+    },
+    {
+      label: 'INSTAGRAM',
+      data: socials?.instagram || 'N/A'
+    }
+  ];
+  const educationalInfo = [
+    {
+      label: 'LEVEL OF EDUCATION',
+      data: eduInfo?.level || 'N/A'
+    },
+    {
+      label: 'EMPLOYMENT STATUS',
+      data: eduInfo?.employmentStatus || 'N/A'
+    },
+    {
+      label: 'SECTOR OF EMPLOYMENT',
+      data: eduInfo?.sector || 'N/A'
+    },
+    {
+      label: 'DURATION OF EMPLOYMENT',
+      data: eduInfo?.duration || ''
+    },
+    {
+      label: 'OFFICIAL EMAIL',
+      data: eduInfo?.officeEmail || ''
+    },
+    {
+      label: 'MONTHLY INCOME',
+      data: eduInfo?.monthlyIncome || ''
+    },
+    {
+      label: 'LOAN REPAYMENT',
+      data: eduInfo?.loanRepay || ''
+    }
+  ];
+
+  const personalInformation = [
+    {
+      label: 'FULL NAME',
+      data: userInfo?.fullName || 'N/A'
+    },
+    {
+      label: 'PHONE NUMBER',
+      data: userInfo?.phoneNumber || 'N/A'
+    },
+    {
+      label: 'EMAIL ADDRESS',
+      data: userInfo?.email || 'N/A'
+    },
+    {
+      label: 'BVN',
+      data: userInfo?.bvn?.toString() || ''
+    },
+    {
+      label: 'GENDER',
+      data: userInfo?.gender || ''
+    },
+    {
+      label: 'MARITAL STATUS',
+      data: userInfo?.maritalStatus || ''
+    },
+    {
+      label: 'CHILDREN',
+      data: userInfo?.children || ''
+    },
+    {
+      label: 'TYPE OF RESIDENCE',
+      data: userInfo?.typeOfResidence || ''
+    }
+  ];
 
   return (
     <div className="background-gray">
@@ -39,9 +130,21 @@ export const UserDetails = () => {
         </div>
       </div>
       <div className="d-flex flex-dir-column gap-3">
-        <UserDetailsCard />
+        <UserDetailsCard
+          name={userInfo?.fullName}
+          userId={data?.userId}
+          accountNumber={data?.bankAccount}
+          bankName={data?.bankName}
+          amount={data?.loanAmount}
+        />
         <div className="p-3 background-white">
-          <InfoSection sectionTitle="Personal Information" />
+          <InfoSection sectionTitle="Personal Information" data={personalInformation} />
+          <hr className="line-straight" />
+          <InfoSection sectionTitle="Education and Employment" data={educationalInfo} />
+          <hr className="line-straight" />
+          <InfoSection sectionTitle="Socials" data={socialInfo} />
+          <hr className="line-straight" />
+          <InfoSection sectionTitle="Guarantor" data={guarantorInfo} />
         </div>
       </div>
     </div>

@@ -1,13 +1,13 @@
-type Gender = 'Male' | 'Female' | 'Other';
+export type Gender = 'Male' | 'Female' | 'Other';
 type MaritalStatus = 'Single' | 'Married' | 'Divorced' | 'Widowed';
 type ResidenceType = 'Apartment' | 'House' | 'Condo' | 'Townhouse';
 type EmploymentStatus = 'Employed' | 'Unemployed';
 type Sector = 'FinTech' | 'Engineering' | 'Construction' | 'Health';
 type Status = 'active' | 'inactive' | 'pending' | 'blacklisted';
-type EducationLevel = 'B.Sc' | 'M.Sc' | 'HND' | 'PhD';
+export type EducationLevel = 'B.Sc' | 'M.Sc' | 'HND' | 'PhD';
 type Relationship = 'Sister' | 'Brother' | 'Father' | 'Mother' | 'Husband' | 'Wife';
 
-interface PersonalInfo {
+export interface PersonalInfo {
   fullName: string;
   bvn: number;
   email: string;
@@ -18,7 +18,7 @@ interface PersonalInfo {
   typeOfResidence: ResidenceType;
 }
 
-interface EducationalInfo {
+export interface EducationalInfo {
   level: EducationLevel;
   employmentStatus: EmploymentStatus;
   sector: Sector;
@@ -28,13 +28,13 @@ interface EducationalInfo {
   loanRepay: string;
 }
 
-interface Socials {
+export interface Socials {
   twitter: string;
   facebook: string;
   instagram: string;
 }
 
-interface Guarantor {
+export interface Guarantor {
   fullName: string;
   phoneNumber: string;
   email: string;
@@ -52,7 +52,7 @@ export interface User {
   status: Status;
   loanAmount: number;
   bankAccount: number;
-  bankAccountName: string;
+  bankName: string;
   educationalInfo: EducationalInfo;
   socials: Socials;
   guarantor: Guarantor;

@@ -22,3 +22,8 @@
     border-bottom: 2px solid utils.$button-color;
   }
 }
+
+.active {
+  color: utils.$button-color;
+  border-bottom: 2px solid utils.$button-color;
+}
