@@ -1,41 +1,30 @@
 import { ChangeEvent, useEffect, useState, useRef } from 'react';
+import useSWR from 'swr';
 import { FaChevronDown } from 'react-icons/fa6';
 import { dashboardCardData } from '../Dashboard';
 import './User.scss';
 import { Card, CustomPagination, DataTable } from '../../components';
+import { fetcher } from '../../api';
 import { User } from '../../types';
 
-const endpoint = 'https://run.mocky.io/v3/f351ee48-b820-41ee-b0d4-e61a8696dd56';
+const endpoint = 'https://run.mocky.io/v3/7da93c6b-2a6e-4f0a-9c37-f4f231503138';
 
 export const Users = () => {
+  const { data } = useSWR(endpoint, fetcher);
   const [users, setUsers] = useState<User[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const recordsPerPage = 10;
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const fetchUsers = async () => {
-      const storedUsers = localStorage.getItem('users');
+    const storedUsers = localStorage.getItem('users');
 
-      if (storedUsers) {
-        setUsers(JSON.parse(storedUsers));
-      } else {
-        try {
-          const response = await fetch(endpoint);
-          const data = await response.json();
-
-          if (data?.users) {
-            localStorage.setItem('users', JSON.stringify(data.users));
-            setUsers(data.users);
-          }
-        } catch (error) {
-          console.error('Failed to fetch users:', error);
-        }
-      }
-    };
-
-    fetchUsers();
-  }, []);
+    if (storedUsers) {
+      setUsers(JSON.parse(storedUsers));
+    } else if (data?.users) {
+      localStorage.setItem('users', JSON.stringify(data.users));
+    }
+  }, [data]);
 
   const getCurrentPageUsers = () => {
     const startIndex = (currentPage - 1) * recordsPerPage;

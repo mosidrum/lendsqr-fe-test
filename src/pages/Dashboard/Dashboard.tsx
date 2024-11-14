@@ -25,23 +25,21 @@ export const Dashboard = () => {
         >
           <Logo />
           {isMobileScreen ? (
-            <>
-              {isSidebarVisible ? (
-                <LiaTimesSolid
-                  size={30}
-                  color="#213f7d"
-                  className="cursor-pointer"
-                  onClick={toggleSidebar}
-                />
-              ) : (
-                <FiMenu
-                  size={30}
-                  color="#213f7d"
-                  className="cursor-pointer"
-                  onClick={toggleSidebar}
-                />
-              )}
-            </>
+            isSidebarVisible ? (
+              <LiaTimesSolid
+                size={30}
+                color="#213f7d"
+                className="cursor-pointer"
+                onClick={toggleSidebar}
+              />
+            ) : (
+              <FiMenu
+                size={30}
+                color="#213f7d"
+                className="cursor-pointer"
+                onClick={toggleSidebar}
+              />
+            )
           ) : (
             <SearchBox />
           )}
