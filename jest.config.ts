@@ -1,8 +1,9 @@
 module.exports = {
+  testEnvironment: 'jest-environment-jsdom',
   preset: 'ts-jest',
-  testEnvironment: 'node',
   transform: {
-    '^.+\\.tsx?$': 'ts-jest'
+    '^.+\\.tsx?$': 'ts-jest',
+    '^.+\\.scss$': 'jest-transform-stub'
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
 };
