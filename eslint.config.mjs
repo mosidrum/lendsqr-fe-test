@@ -105,6 +105,7 @@ export default [
             'react/prop-types': 'off',
             'react/jsx-one-expression-per-line': 'off',
             'no-underscore-dangle': 'off',
+            "unicorn/numeric-separators-style": "off",
             'linebreak-style': 'off',
             'no-confusing-arrow': 'off',
             'react/jsx-curly-newline': 'off',
