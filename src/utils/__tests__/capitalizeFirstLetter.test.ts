@@ -1,11 +1,21 @@
 import { capitalizeFirstLetter } from '../capitalizeFirstLetter';
 
 describe('capitalizeFirstLetter', () => {
-  it('returns an empty string when an empty string is passed', () => {
-    expect(capitalizeFirstLetter('')).toBe('');
-  });
+  const testCases = [
+    { input: '', expected: '' },
+    { input: 'hello', expected: 'Hello' },
+    { input: '0123', expected: '0123' },
+    { input: 'javascript', expected: 'Javascript' },
+    { input: 'react', expected: 'React' },
+    { input: 'tESTING', expected: 'TESTING' },
+    { input: ' a leading space', expected: ' a leading space' },
+    { input: 'A', expected: 'A' },
+    { input: 'multiple words here', expected: 'Multiple words here' }
+  ];
 
-  it('capitalizes the first letter of a non-empty string', () => {
-    expect(capitalizeFirstLetter('hello')).toBe('Hello');
+  testCases.forEach(({ input, expected }) => {
+    it(`returns "${expected}" for input "${input}"`, () => {
+      expect(capitalizeFirstLetter(input)).toBe(expected);
+    });
   });
 });
