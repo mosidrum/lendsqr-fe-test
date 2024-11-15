@@ -1,4 +1,4 @@
-import lendsqr from '../../assets/logo.svg';
+import lendsqr from '../../assets/logo.png';
 import './Logo.scss';
 
 type LogoProps = {

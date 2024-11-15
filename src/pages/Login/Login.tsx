@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import lendsqr from '../../assets/logo.svg';
+import lendsqr from '../../assets/logo.png';
 import illustration from '../../assets/illustration.svg';
 import { BaseField, Logo, PrimaryButton } from '../../components';
 import './login.scss';
