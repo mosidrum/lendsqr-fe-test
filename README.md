@@ -77,7 +77,7 @@ Make sure that the tests are set up in the `__tests__` folder or wherever you ha
 
 ### Jest Setup
 
-The project uses Jest for unit testing with TypeScript. You can customize the Jest configuration in the `jest.config.ts` file.
+The project uses Jest for unit testing with TypeScript. You can customize the Jest configuration in the [jest.config.ts](jest.config.ts) file.
 
 ### API Integration
 
@@ -95,4 +95,12 @@ Feel free to fork this repository and create a pull request with your changes. W
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any questions or feedback, feel free to reach out:
+
+- **Name**: Isaac Ayodele
+- **Email**: [mosiokanga@gmail.com](mailto:mosiokanga@gmail.com)
+- **GitHub**: [mosidrum](https://github.com/mosidrum)
